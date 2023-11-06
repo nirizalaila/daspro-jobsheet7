@@ -1,6 +1,6 @@
 import java.util.Scanner;
-public class WhileGaji24 {
-    public static void main(String[] args) {
+public class ModifWhileGaji24 {
+  public static void main(String[] args) {
     Scanner scan = new Scanner(System.in);
     int jumlahKaryawan, jumlahJamLebur;
     double gajiLembur, totalGajiLembur;
@@ -27,10 +27,12 @@ public class WhileGaji24 {
             gajiLembur = jumlahJamLebur * 100000;
         } else if (jabatan.equalsIgnoreCase("karyawan")) {
             gajiLembur = jumlahJamLebur * 75000;
+        } else {
+            System.out.println("Jabatan invalid");
         }
         totalGajiLembur += gajiLembur;
 
+        System.out.println("Total gaji lembur: " + totalGajiLembur);
     }
-    System.out.println("Total gaji lembur: " + totalGajiLembur);
-    }
+  }  
 }
